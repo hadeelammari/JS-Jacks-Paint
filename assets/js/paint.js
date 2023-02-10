@@ -3,7 +3,7 @@ function configureListeners() {
 
 
      for (var i = 0; i < images.length; i++) {        
-        document.getElementById(images[i].id).addEventListener(`hover`,addOpacity,false)  
+        document.getElementById(images[i].id).addEventListener(`mouseover`,addOpacity,false)  
         document.getElementById(images[i].id).addEventListener(`mouseover`,removeOpacity,false)   
 
     } //mouseover event listeners 
@@ -11,7 +11,7 @@ function configureListeners() {
 
 
 function addOpacity(event) {
-    if (this.classList.contains('dim')){
+    if (!this.classList.contains('dim')){
         this.classList.add('dim')
     }
     getProductInfo(event.target.id);     
