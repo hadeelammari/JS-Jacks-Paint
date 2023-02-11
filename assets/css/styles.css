@@ -2,7 +2,7 @@ body{
   font-family: 'Zen Kaku Gothic Antique', sans-serif;
  }
  .dim{
-    opacity: 0.1555;
+    opacity: .1;
   }
 
   .priceDiv {
@@ -14,6 +14,11 @@ body{
     padding-left: 80px;
   }
 
+  .price {
+
+
+  }
+  
   .floatRight {
     float:right;
     padding-right: 500px;
