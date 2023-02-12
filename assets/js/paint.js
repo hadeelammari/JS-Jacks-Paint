@@ -1,5 +1,8 @@
 function configureListeners() {
-    let images = [pn1, pn2, pn3, pn4, pn5, pn6, pn7, pn8, pn9] 
+    //Here you should get the images from the HTML page you have
+    let images = document.getElementsByTagName("img")
+    //let images = [pn1, pn2, pn3, pn4, pn5, pn6, pn7, pn8, pn9] 
+    
 
 
      for (var i = 0; i < images.length; i++) {        
