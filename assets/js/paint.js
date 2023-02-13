@@ -4,15 +4,15 @@ function configureListeners() {
 
      for (var i = 0; i < images.length; i++) {        
         // iterate over images and add mouseover event listeners     
-       document.getElementByIld(images[i].id)addEventLister("mouseover", addOpacity, false)
-        document.getElementByIld(images[i].id)addEventLister("mouseout", removeOpacity, false)
+       document.getElementById(images[i].id).addEventListener("mouseover", addOpacity, false)
+        document.getElementById(images[i].id).addEventListener("mouseout", removeOpacity, false)
     } 
 }
 
 function addOpacity(event) {
     // add appropriate CSS class
   if(!this.classList.contains('dim')){
-    this.classlist.add('dim')
+    this.classList.add('dim')
   }
     getProductInfo(event.target.id);     
 }
@@ -37,56 +37,56 @@ function getProductInfo(paintColor) {
     
     switch (paintColor) {
         case 'pn1':
-        color: "19.99"
-        colorName: "Lime Green"
+        price= "19.99"
+        colorName= "Lime Green"
         updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price     
             break;           
         case 'pn2':
-         price: "12.99"
-        colorName: "Medium Brown"
+         price= "12.99"
+        colorName= "Medium Brown"
         updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price    
             break;            
         case 'pn3':
-         price: "11.99"
-        colorName:"Royal Blue"
+         price= "11.99"
+        colorName= "Royal Blue"
         updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price  
             break;   
         case 'pn4':
-         price:"14.99"
-        colorName:"Bright Red"
+         price="14.99"
+        colorName= "Bright Red"
         updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price  
             break;   
         case 'pn5':
-         price:"9.99"
-        colorName:"Soild White"
+         price="9.99"
+        colorName="Soild White"
         updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price       
             break;   
         case 'pn6':
-         price:"15.99"
-        colorName:"Soild Black"
+         price="15.99"
+        colorName="Soild Black"
         updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price        
             break;   
         case 'pn7':
-         price: "8.99"
-        colorName:"Medium Blue"
+         price= "8.99"
+        colorName="Medium Blue"
         updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price 
             break;   
         case 'pn8':
-         price:"16.99"
-        colorName: "Light Purple"
+         price="16.99"
+        colorName= "Light Purple"
         updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price   
             break;   
         case 'pn9':
-         price: "17.99"
-        colorName:"Bright Yellow"
+         price= "17.99"
+        colorName="Bright Yellow"
         updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price 
             break;   
@@ -95,11 +95,11 @@ function getProductInfo(paintColor) {
 
     function updatePrice(colorName, price)
     {       
-        let colorPrice = document.getElementId('color-price')// select element with corresponding id
+        let colorPrice = document.getElementById('color-price')// select element with corresponding id
         // display price
       colorPrice.textContent = price;
         
-        let color = document.getElementId('color-name')// select element with corresponding id
+        let color = document.getElementById('color-name')// select element with corresponding id
         //display color name
       color.textContent = colorName;
     }
