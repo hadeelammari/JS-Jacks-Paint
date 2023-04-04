@@ -1,14 +1,17 @@
 function configureListeners() {
-    let images = // select img elements  
+    let images = document.getElementsByClassName('images');
+    images.innerHTML.append(images)// select img elements  
 
 
      for (var i = 0; i < images.length; i++) {        
-        // iterate over images and add mouseover event listeners      
+        pn4.addEventListener('mouseover', function() {
+            console.log('mouseover');
+        }, false);// iterate over images and add mouseover event listeners      
     } 
 }
 
 function addOpacity(event) {
-    // add appropriate CSS class
+    addOpacity.style.color = white;// add appropriate CSS class
     getProductInfo(event.target.id);     
 }
 
@@ -30,31 +33,31 @@ function getProductInfo(paintColor) {
     
     switch (paintColor) {
         case 'pn1':           
-            // set variables for price and color name and invoke a function to update the price     
+            console.log('14.99, Lime Green')// set variables for price and color name and invoke a function to update the price     
             break;           
         case 'pn2':
-            // set variables for price and color name and invoke a function to update the price    
+            console.log('11.14, Medium Brown')// set variables for price and color name and invoke a function to update the price    
             break;            
         case 'pn3':
-            // set variables for price and color name and invoke a function to update the price  
+            console.log('22.99, Royal Blue')// set variables for price and color name and invoke a function to update the price  
             break;   
         case 'pn4':
-            // set variables for price and color name and invoke a function to update the price  
+            console.log('13.42, Solid Red')// set variables for price and color name and invoke a function to update the price  
             break;   
         case 'pn5':
-            // set variables for price and color name and invoke a function to update the price       
+            console.log('21.98, Solid White')// set variables for price and color name and invoke a function to update the price       
             break;   
         case 'pn6':
-            // set variables for price and color name and invoke a function to update the price        
+            console.log('4.99, Solid Black')// set variables for price and color name and invoke a function to update the price        
             break;   
         case 'pn7':
-            // set variables for price and color name and invoke a function to update the price 
+            console.log('8.22, Solid Cyan')// set variables for price and color name and invoke a function to update the price 
             break;   
         case 'pn8':
-            // set variables for price and color name and invoke a function to update the price   
+            console.log('11.99, Solid Purple')// set variables for price and color name and invoke a function to update the price   
             break;   
         case 'pn9':
-            // set variables for price and color name and invoke a function to update the price 
+            console.log('14.99, Solid Yellow')// set variables for price and color name and invoke a function to update the price 
             break;   
           default:              
     }
