@@ -6,7 +6,8 @@ function configureListeners() {
      for (var i = 0; i < images.length; i++) {        
         pn4.addEventListener('mouseover', function() {
             console.log('mouseover');
-        }, false);// iterate over images and add mouseover event listeners      
+        }, false);
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)// iterate over images and add mouseover event listeners      
     } 
 }
 
@@ -32,42 +33,71 @@ function getProductInfo(paintColor) {
     let colorName;  
     
     switch (paintColor) {
-        case 'pn1':           
-            console.log('14.99, Lime Green')// set variables for price and color name and invoke a function to update the price     
+        case 'pn1':  
+            price = "$14.99" 
+            colorName = 'Lime Green'
+            updatePrice = (colorName, price)        
+           // set variables for price and color name and invoke a function to update the price     
             break;           
         case 'pn2':
-            console.log('11.14, Medium Brown')// set variables for price and color name and invoke a function to update the price    
+            price = "$11.14" 
+            colorName = 'Medium Brown'
+            updatePrice = (colorName, price)  
+            // set variables for price and color name and invoke a function to update the price    
             break;            
         case 'pn3':
-            console.log('22.99, Royal Blue')// set variables for price and color name and invoke a function to update the price  
+            price = "$22.99" 
+            colorName = 'Royal Blue'
+            updatePrice = (colorName, price) 
+            // set variables for price and color name and invoke a function to update the price  
             break;   
         case 'pn4':
-            console.log('13.42, Solid Red')// set variables for price and color name and invoke a function to update the price  
+            price = "$13.42" 
+            colorName = 'Solid Red'
+            updatePrice = (colorName, price) 
+            // set variables for price and color name and invoke a function to update the price  
             break;   
         case 'pn5':
-            console.log('21.98, Solid White')// set variables for price and color name and invoke a function to update the price       
+            price = "$21.98" 
+            colorName = 'Solid White'
+            updatePrice = (colorName, price) 
+            // set variables for price and color name and invoke a function to update the price       
             break;   
         case 'pn6':
-            console.log('4.99, Solid Black')// set variables for price and color name and invoke a function to update the price        
+            Price = "$4.99" 
+            colorName = 'Solid Black'
+            updatePrice = (colorName, price) 
+            // set variables for price and color name and invoke a function to update the price        
             break;   
         case 'pn7':
-            console.log('8.22, Solid Cyan')// set variables for price and color name and invoke a function to update the price 
+            price = "$8.22" 
+            colorName = 'Solid Cyan'
+            updatePrice = (colorName, price) 
+            // set variables for price and color name and invoke a function to update the price 
             break;   
         case 'pn8':
-            console.log('11.99, Solid Purple')// set variables for price and color name and invoke a function to update the price   
+            price = "$11.99" 
+            colorName = 'Solid Purple'
+            updatePrice = (colorName, price) 
+            // set variables for price and color name and invoke a function to update the price   
             break;   
         case 'pn9':
-            console.log('14.99, Solid Yellow')// set variables for price and color name and invoke a function to update the price 
+            price = "$14.99" 
+            colorName = 'Solid Yellow'
+            updatePrice = (colorName, price) 
+            // set variables for price and color name and invoke a function to update the price 
             break;   
           default:              
     }
 
     function updatePrice(colorName, price)
     {       
-        let colorPrice = // select element with corresponding id
+        let colorPrice = document.getElementById('pn6');
+        colorPrice.textContent = price;// select element with corresponding id
         // display price
         
-        let color = // select element with corresponding id
+        let color = document.getElementById('pn6');
+        color.textContent = colorName;// select element with corresponding id
         //display color name
     }
     
