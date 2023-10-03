@@ -2,7 +2,7 @@ function configureListeners() {
     let images = // select img elements  
 
 
-     for (var i = 0; i < images.length; i++) {        
+    for (var i = 0; i < images.length; i++) {        
         // iterate over images and add mouseover event listeners      
     } 
 }
@@ -56,7 +56,7 @@ function getProductInfo(paintColor) {
         case 'pn9':
             // set variables for price and color name and invoke a function to update the price 
             break;   
-          default:              
+        default:              
     }
 
     function updatePrice(colorName, price)
