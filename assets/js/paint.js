@@ -7,7 +7,7 @@ function configureListeners() {
             .addEventListener("mouseover", addOpacity, false);
         document
             .getElementById(images[i].id)
-            .addEventListener("mouseover", removeOpacity, false);
+            .addEventListener("mouseout", removeOpacity, false);
     }
 }
 
