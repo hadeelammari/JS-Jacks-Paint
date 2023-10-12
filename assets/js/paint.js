@@ -9,11 +9,9 @@ function configureListeners() {
     let images = document.getElementsByTagName('img');
     // here we are looping through the array of images and adding an event listener to each
     for (var i = 0; i < images.length; i++) {
-        document
-            .getElementById(images[i].id)
-            // event listeners can take three parameters 1.event 2.function 3.boolean value
-            .addEventListener('mouseover', addOpacity, false);
-        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false);
+         // event listeners can take three parameters 1.event 2.function 3.boolean value
+        images[i].addEventListener('mouseover', addOpacity, false);
+        images[i].addEventListener('mouseout', removeOpacity, false);
     }
 }
 
