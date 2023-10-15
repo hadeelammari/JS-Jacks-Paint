@@ -1,7 +1,7 @@
 function configureListeners() {
     var images = document.getElementsByTagName('img');  
 
-
+//when the mouse goes over or leaves the square it add's or removes opacity from squares  
     for (var i = 0; i < images.length; i++) {        
         var document = document.getElementById(images);
         document.getElementById(images).addEventListener("mouseover", addOpacity, false);
@@ -10,14 +10,14 @@ function configureListeners() {
 
     } 
 }
-
+//adds class from styles.css file. dims opacity
 function addOpacity(event) {
     if (this.classList.contains('dim')){
         this.classList.add('dim')
     }    
     getProductInfo(event.target.id);     
 }
-
+//when the mouse leaves the square changes opacity back to normal
 function removeOpacity(event) {
     if (this.classList.contains('dim')){
         this.classList.remove('dim');
@@ -31,7 +31,7 @@ function removeOpacity(event) {
 
     event.preventDefault();    
 }
-
+//added price and color acorrding to the index.html file along with price
 function getProductInfo(paintColor) {
     let price;
     let colorName;  
@@ -92,7 +92,7 @@ function getProductInfo(paintColor) {
             break;   
         default:              
     }
-
+//calls elements by color and price
     function updatePrice(colorName, price)
     {       
         let colorPrice = document.getElementById('color-price');
