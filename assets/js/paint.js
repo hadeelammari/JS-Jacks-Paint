@@ -3,16 +3,16 @@ function configureListeners() {
 
 //when the mouse goes over or leaves the square it add's or removes opacity from squares  
     for (var i = 0; i < images.length; i++) {        
-        var document = document.getElementById(images);
-        document.getElementById(images).addEventListener("mouseover", addOpacity, false);
-        document.getElementById(images).addEventListener("mouseout", removeOpacity, false);
+       
+        images[i].addEventListener("mouseover", addOpacity, false);
+        images[i].addEventListener("mouseout", removeOpacity, false);
 
 
     } 
 }
 //adds class from styles.css file. dims opacity
 function addOpacity(event) {
-    if (this.classList.contains('dim')){
+    if (!this.classList.contains('dim')){
         this.classList.add('dim')
     }    
     getProductInfo(event.target.id);     
