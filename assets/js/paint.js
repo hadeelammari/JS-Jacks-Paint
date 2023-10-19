@@ -25,7 +25,7 @@ function removeOpacity(event) {
     if (this.classList.contains('dim')){
         this.classList.remove('dim');
     }
-//placeholde/unneeded
+//placeholde/unneeded //This is actually needed to set the price to an empty string when the cursor moves out of the paint cell
     let element = document.getElementById('color-price');
         element.textContent = '';
         
@@ -35,7 +35,7 @@ function removeOpacity(event) {
     event.preventDefault();    
 }
 
-//creates class with parameters which change depending on ht elementbeing selected
+//creates class with parameters which change depending on ht elementbeing selected //This is a function not a class 
 function getProductInfo(paintColor) {
     let price;
     let colorName;  
@@ -90,7 +90,7 @@ function getProductInfo(paintColor) {
           default:              
     }
 
-    //function that finds and changes the html element with the matching id 
+    //function that finds and changes the html element with the matching id  //What does it change in the html element and which element?
     function updatePrice(colorName, price)
     {       
         let colorPrice = document.getElementById('color-price')
